@@ -13,6 +13,10 @@
   height: 50px;
   border: 3px solid black;
 }
+.object {
+  position: relative;
+  z-index: 100;
+}
 </style>
 <script>
 function allowDrop(ev) {
@@ -37,7 +41,7 @@ function drop(ev) {
 
 <div class="suitcase">
 <div id="divA1" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="Picture1.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="100">
+  <img class="item" src="Picture1.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="100">
 </div>
 
 <div id="divA2" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
