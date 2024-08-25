@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+.suitcase {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  background-color: #2196F3;
+}
+.suitcase_spot {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<h2>Drag and Drop</h2>
+<p>Drag the image back and forth between the two div elements.</p>
+
+<div class="suitcase">
+<div id="divA1" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="Picture1.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="100">
+</div>
+
+<div id="divA2" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divA3" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divA4" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<div id="divB1" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divB2" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divB3" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divB4" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<div id="divC1" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divC2" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divC3" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divC4" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<div id="divD1" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divD2" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divD3" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divD4" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<div id="divE1" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divE2" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divE3" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="divE4" class="suitcase_spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+
+</body>
+</html>
+
